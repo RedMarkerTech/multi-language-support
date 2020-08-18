@@ -4,9 +4,6 @@
 #Use the commands:
 
 bash
-git config --global credential.helper '!aws codecommit credential-helper $@'
-git config --global credential.UseHttpPath true
-ls 
 cd SageMaker
 cd multi-language-support
 git pull
@@ -19,8 +16,12 @@ git pull
 # 4. Update github scripts with any changes. Open jupyter terminal and put in the commands:
 
 bash 
+cd SageMaker
 cd multi-language-support
 git status
+#Get name of modified files
 git add "filename" 
 git commit -a
+#type in change comment, then esc, then :wq, then enter
 git push origin master
+#put in username and password
